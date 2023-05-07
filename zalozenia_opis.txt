@@ -1,0 +1,44 @@
+*************************************************************************************
+Celem projektu jest wykorzystanie ciągu Fibonacciego do szukania zadanej wartości.
+*************************************************************************************
+
+W projekcie zostaną zaimplementowane dwie funckjonalności:
+1. Szukanie zadanej wartości w podanej przez użytkowanika tablicy i zwrócenie indeksu.
+	wejście:
+		*posegregowana tablica N-elementowa
+		*szukana wartość
+	wyjście:
+		*czy szukana wartość występuje w tablicy
+		*indeks tablicy pod którym jest szukana wartość
+
+2. Szukanie minimum funkcji 
+	wejście:
+		*współczynniki wielomianu funkcji unimodalnej (maksymalnie jedno ekstremum w zadanym przedziale)
+		*przedział w którym chcemy wyszukać minimum
+		*dokładność przybliżenia wyniku (E)
+	wyjście:
+		*wartość minimum
+
+*************************************************************************************
+Pseudoalgorytmy:
+
+Punkt 1 
+0. Sprawdzenie czy czy użytkownik poprawnie podał dane oraz czy tablica podana przez użytkownika nie jest pusta. 
+1. Wyznaczenie wartości ciągu Fibonacciego dla liczby większej lub równej rozmiarowi tablicy.
+2. Wyznaczenie wartości ciągu Fibonacciego dla liczby dla indeksu o jeden mniejszy niż w punkcie 1.
+3. Sprawdzenie czy wartość tablicy pod indeksem przedostatniego elementu ciągu jest mniejsza, równa lub większa od szukanego elementu.
+3a. Jeżeli wartość jest równa, to znaleźliśmy szukany element.
+3b. Jeżeli wartość jest mniejsza, to zawężamy przedział do lewej strony tablicy względem porównywanego indeksu.
+3c. Jeżeli wartość jest większa, to zawężamy przedział do prawej strony tablicy względem porównywanego indeksu.
+4. Jeżeli nie została znaleziona wartość to należy powtórzyć kroki od punktu 2.
+5. W przypadku ponownych interacji i zejściu indeksowania do zera, szukana wartosć nie występuje w tablicy.
+
+Punkt 2 
+Podstawowa zasada algorytmu jest taka sama jak w punkcie 1.
+Dodatkowo:
+Nieznana jest wartość szukanego klucza. Porównywane są wartości funkcji w punktach wyznaczonych przez elementy ciągu Fibonacciego.
+
+Przedział początkowy (a,b)
+X1 = a + (Fn-2/Fn)(b-a)
+X1 = a + (Fn-1/Fn)(b-a)
+E = (b-a)/Fn
