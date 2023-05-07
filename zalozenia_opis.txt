@@ -3,6 +3,9 @@ Celem projektu jest wykorzystanie ciągu Fibonacciego do szukania zadanej warto�
 *************************************************************************************
 
 W projekcie zostaną zaimplementowane dwie funckjonalności:
+
+0. Ciąg fibonacciego
+
 1. Szukanie zadanej wartości w podanej przez użytkowanika tablicy i zwrócenie indeksu.
 	wejście:
 		*posegregowana tablica N-elementowa
@@ -21,6 +24,9 @@ W projekcie zostaną zaimplementowane dwie funckjonalności:
 
 *************************************************************************************
 Pseudoalgorytmy:
+
+Punkt 0
+1. Kolejny element ciągu jest sumą dwóch poprzednich.
 
 Punkt 1 
 0. Sprawdzenie czy czy użytkownik poprawnie podał dane oraz czy tablica podana przez użytkownika nie jest pusta. 
